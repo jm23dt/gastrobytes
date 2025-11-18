@@ -15,10 +15,10 @@
         <td>{{ u.role }}</td>
         <td>
 
-            <!-- EDIT USER -->
+
             <a href="{{ url_for('admin_edit_user', uid=u._id) }}">Edit</a>
 
-            <!-- DELETE USER -->
+
             <form action="{{ url_for('admin_delete_user', uid=u._id) }}"
                   method="post" style="display:inline-block; margin-left:10px;">
                 <button type="submit"
