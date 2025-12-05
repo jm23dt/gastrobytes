@@ -188,16 +188,20 @@ a {
 
     a#navicon {
         display: block;
-        margin-left: auto;
-        margin-right: auto;
         width: fit-content;
+        margin: auto;
+        cursor: pointer;
     }
 
-    aside nav ul{
-        display:none;
+    aside nav ul {
+        flex-direction: column;
+        gap: 10px;
     }
 
-
+    a#navicon:focus + ul,
+    aside nav:focus-within ul {
+        max-height: 500px;
+    }
 
     a#navicon:hover+ul, aside nav ul:hover {
         display: block;
@@ -206,6 +210,30 @@ a {
      #mainWindow {
         width: 95vw;
      }
+     aside nav li {
+        width: 100%;
+        margin: 2px 0;
+        font-size: 5vw;
+    }
+
+     .recipe-card {
+        width: 90vw !important;
+        height: 70vh !important;
+        perspective: 1000px;
+    }
+     .card-front,
+    .card-back {
+        position: relative;
+        width: 100%;
+        height: auto;
+        backface-visibility: hidden;
+    }
+     .card-back {
+        transform: rotateY(180deg);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
 
 
   }
